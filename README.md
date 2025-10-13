@@ -1,15 +1,17 @@
 # dendro 🌳
 
 [![npm version](https://badge.fury.io/js/%40crashbytes%2Fdendro.svg)](https://www.npmjs.com/package/@crashbytes/dendro)
+[![npm downloads](https://img.shields.io/npm/dm/@crashbytes/dendro.svg)](https://npmjs.org/package/@crashbytes/dendro)
+[![Node version](https://img.shields.io/node/v/@crashbytes/dendro.svg?style=flat)](https://nodejs.org)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![GitHub issues](https://img.shields.io/github/issues/CrashBytes/dendron)](https://github.com/CrashBytes/dendron/issues)
-[![GitHub stars](https://img.shields.io/github/stars/CrashBytes/dendron)](https://github.com/CrashBytes/dendron/stargazers)
+[![GitHub issues](https://img.shields.io/github/issues/CrashBytes/dendro)](https://github.com/CrashBytes/dendro/issues)
+[![GitHub stars](https://img.shields.io/github/stars/CrashBytes/dendro)](https://github.com/CrashBytes/dendro/stargazers)
 
 **dendro** (δένδρο) - from the Greek word for "tree"
 
 A beautiful, fast directory tree visualization CLI with intuitive file type icons.
 
-🔗 **[GitHub Repository](https://github.com/CrashBytes/dendron)** | 📦 **[npm Package](https://www.npmjs.com/package/@crashbytes/dendro)**
+🔗 **[GitHub Repository](https://github.com/CrashBytes/dendro)** | 📦 **[npm Package](https://www.npmjs.com/package/@crashbytes/dendro)**
 
 ---
 
@@ -54,8 +56,8 @@ npx @crashbytes/dendro
 ### From Source (GitHub)
 
 ```bash
-git clone https://github.com/CrashBytes/dendron.git
-cd dendron
+git clone https://github.com/CrashBytes/dendro.git
+cd dendro
 npm install
 npm link
 ```
@@ -272,7 +274,7 @@ console.log(`Build output: ${stats.files} files in ${stats.directories} director
 
 ## Examples
 
-See the [`/examples`](https://github.com/CrashBytes/dendron/tree/main/examples) directory for more usage examples:
+See the [`/examples`](https://github.com/CrashBytes/dendro/tree/main/examples) directory for more usage examples:
 - `basic-usage.js` - Simple tree visualization
 - `advanced-usage.js` - Custom filtering and statistics
 
@@ -280,11 +282,11 @@ See the [`/examples`](https://github.com/CrashBytes/dendron/tree/main/examples) 
 
 We welcome contributions! Here's how you can help:
 
-1. **Fork the repository** on [GitHub](https://github.com/CrashBytes/dendron)
+1. **Fork the repository** on [GitHub](https://github.com/CrashBytes/dendro)
 2. **Clone your fork**
    ```bash
-   git clone https://github.com/YOUR-USERNAME/dendron.git
-   cd dendron
+   git clone https://github.com/YOUR-USERNAME/dendro.git
+   cd dendro
    npm install
    ```
 3. **Create a feature branch**
@@ -316,7 +318,7 @@ We welcome contributions! Here's how you can help:
 
 ## Bug Reports & Feature Requests
 
-Found a bug or have a feature request? Please open an issue on [GitHub Issues](https://github.com/CrashBytes/dendron/issues).
+Found a bug or have a feature request? Please open an issue on [GitHub Issues](https://github.com/CrashBytes/dendro/issues).
 
 When reporting bugs, please include:
 - Your OS and Node.js version
@@ -336,8 +338,8 @@ npm test
 
 ```bash
 # Clone the repository
-git clone https://github.com/CrashBytes/dendron.git
-cd dendron
+git clone https://github.com/CrashBytes/dendro.git
+cd dendro
 
 # Install dependencies
 npm install
@@ -351,11 +353,11 @@ dendro ~/test-directory
 
 ## Changelog
 
-See [CHANGELOG.md](https://github.com/CrashBytes/dendron/blob/main/CHANGELOG.md) for version history.
+See [CHANGELOG.md](https://github.com/CrashBytes/dendro/blob/main/CHANGELOG.md) for version history.
 
 ## License
 
-MIT License - see [LICENSE](https://github.com/CrashBytes/dendron/blob/main/LICENSE) file for details.
+MIT License - see [LICENSE](https://github.com/CrashBytes/dendro/blob/main/LICENSE) file for details.
 
 ## Author
 
@@ -368,14 +370,14 @@ MIT License - see [LICENSE](https://github.com/CrashBytes/dendron/blob/main/LICE
 
 Built with ❤️ for developers who love beautiful CLIs.
 
-Special thanks to all [contributors](https://github.com/CrashBytes/dendron/graphs/contributors) who help make dendro better!
+Special thanks to all [contributors](https://github.com/CrashBytes/dendro/graphs/contributors) who help make dendro better!
 
 ---
 
 ## Support
 
 If you find dendro useful, please:
-- ⭐ Star the project on [GitHub](https://github.com/CrashBytes/dendron)
+- ⭐ Star the project on [GitHub](https://github.com/CrashBytes/dendro)
 - 🐦 Share it on social media
 - 📝 Write a blog post about it
 - 💬 Tell your developer friends
