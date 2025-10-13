@@ -47,7 +47,7 @@ dendro . -a
 
 ### Method 4: Use with npx (after publishing)
 ```bash
-npx dendro
+npx @crashbytes/dendro
 ```
 
 ## Common Test Commands
@@ -78,7 +78,7 @@ Create a test file:
 
 ```javascript
 // my-test.js
-const { buildTree, renderTree, getTreeStats } = require('./index');
+const { buildTree, renderTree, getTreeStats } = require('@crashbytes/dendro');
 
 const tree = buildTree('.', { maxDepth: 2 });
 const output = renderTree(tree, { showIcons: true });

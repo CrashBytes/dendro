@@ -1,10 +1,10 @@
 {
-  "name": "dendro",
+  "name": "@crashbytes/dendro",
   "version": "1.0.0",
   "description": "A beautiful directory tree visualization CLI with file type icons - dendro (δένδρο) means 'tree' in Greek",
   "main": "index.js",
   "bin": {
-    "dendro": "./bin/cli.js"
+    "dendro": "bin/cli.js"
   },
   "scripts": {
     "test": "node test.js"

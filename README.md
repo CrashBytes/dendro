@@ -1,8 +1,17 @@
 # dendro 🌳
 
+[![npm version](https://badge.fury.io/js/%40crashbytes%2Fdendro.svg)](https://www.npmjs.com/package/@crashbytes/dendro)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![GitHub issues](https://img.shields.io/github/issues/CrashBytes/dendron)](https://github.com/CrashBytes/dendron/issues)
+[![GitHub stars](https://img.shields.io/github/stars/CrashBytes/dendron)](https://github.com/CrashBytes/dendron/stargazers)
+
 **dendro** (δένδρο) - from the Greek word for "tree"
 
 A beautiful, fast directory tree visualization CLI with intuitive file type icons.
+
+🔗 **[GitHub Repository](https://github.com/CrashBytes/dendron)** | 📦 **[npm Package](https://www.npmjs.com/package/@crashbytes/dendro)**
+
+---
 
 ## Why "dendro"?
 
@@ -30,14 +39,25 @@ When you visualize directory structures, you're essentially mapping a tree—and
 
 ## Installation
 
+### Via npm (Recommended)
+
 ```bash
-npm install -g dendro
+npm install -g @crashbytes/dendro
 ```
 
-Or use directly with npx:
+### Via npx (No Installation)
 
 ```bash
-npx dendro
+npx @crashbytes/dendro
+```
+
+### From Source (GitHub)
+
+```bash
+git clone https://github.com/CrashBytes/dendron.git
+cd dendron
+npm install
+npm link
 ```
 
 ## Quick Start
@@ -131,7 +151,7 @@ dendro automatically detects and displays appropriate icons for common file type
 Use dendro in your Node.js projects:
 
 ```javascript
-const { buildTree, renderTree, getTreeStats } = require('dendro');
+const { buildTree, renderTree, getTreeStats } = require('@crashbytes/dendro');
 
 // Build a tree structure
 const tree = buildTree('/path/to/directory', {
@@ -215,7 +235,7 @@ Override with `-a` or use `-e` to add custom exclusions.
 ### Custom Filtering
 
 ```javascript
-const { buildTree, renderTree } = require('dendro');
+const { buildTree, renderTree } = require('@crashbytes/dendro');
 
 // Build tree
 const tree = buildTree('.', { maxDepth: 3 });
@@ -242,7 +262,7 @@ console.log(renderTree(jsOnly));
 
 ```javascript
 // In your build script
-const { buildTree, getTreeStats } = require('dendro');
+const { buildTree, getTreeStats } = require('@crashbytes/dendro');
 
 const tree = buildTree('./dist');
 const stats = getTreeStats(tree);
@@ -252,36 +272,113 @@ console.log(`Build output: ${stats.files} files in ${stats.directories} director
 
 ## Examples
 
-See the `/examples` directory for more usage examples:
+See the [`/examples`](https://github.com/CrashBytes/dendron/tree/main/examples) directory for more usage examples:
 - `basic-usage.js` - Simple tree visualization
 - `advanced-usage.js` - Custom filtering and statistics
 
-## Publishing to npm
-
-This package can be published to npm:
-
-```bash
-npm login
-npm publish
-```
-
 ## Contributing
 
-Contributions are welcome! Feel free to:
-- Add new file type icons
-- Improve performance
-- Add new features
-- Fix bugs
+We welcome contributions! Here's how you can help:
+
+1. **Fork the repository** on [GitHub](https://github.com/CrashBytes/dendron)
+2. **Clone your fork**
+   ```bash
+   git clone https://github.com/YOUR-USERNAME/dendron.git
+   cd dendron
+   npm install
+   ```
+3. **Create a feature branch**
+   ```bash
+   git checkout -b feature/amazing-feature
+   ```
+4. **Make your changes** and test them
+   ```bash
+   npm test
+   node bin/cli.js
+   ```
+5. **Commit your changes**
+   ```bash
+   git commit -m "Add amazing feature"
+   ```
+6. **Push to your fork**
+   ```bash
+   git push origin feature/amazing-feature
+   ```
+7. **Open a Pull Request** on GitHub
+
+### Areas for Contribution
+
+- 🎨 Add more file type icons
+- ⚡ Performance optimizations
+- 📝 Documentation improvements
+- 🐛 Bug fixes
+- ✨ New features
+
+## Bug Reports & Feature Requests
+
+Found a bug or have a feature request? Please open an issue on [GitHub Issues](https://github.com/CrashBytes/dendron/issues).
+
+When reporting bugs, please include:
+- Your OS and Node.js version
+- Steps to reproduce
+- Expected vs actual behavior
+- Screenshots if applicable
+
+## Development
+
+### Running Tests
+
+```bash
+npm test
+```
+
+### Local Development
+
+```bash
+# Clone the repository
+git clone https://github.com/CrashBytes/dendron.git
+cd dendron
+
+# Install dependencies
+npm install
+
+# Link for local testing
+npm link
+
+# Make changes and test
+dendro ~/test-directory
+```
+
+## Changelog
+
+See [CHANGELOG.md](https://github.com/CrashBytes/dendron/blob/main/CHANGELOG.md) for version history.
 
 ## License
 
-MIT License - see LICENSE file for details
+MIT License - see [LICENSE](https://github.com/CrashBytes/dendron/blob/main/LICENSE) file for details.
 
 ## Author
 
-**CrashBytes** - [crashbytes.com](https://crashbytes.com)
+**CrashBytes**
+- Website: [crashbytes.com](https://crashbytes.com)
+- GitHub: [@CrashBytes](https://github.com/CrashBytes)
+- Twitter: [@crashbytes](https://twitter.com/crashbytes)
 
-Built with ❤️ for developers who love beautiful CLIs
+## Acknowledgments
+
+Built with ❤️ for developers who love beautiful CLIs.
+
+Special thanks to all [contributors](https://github.com/CrashBytes/dendron/graphs/contributors) who help make dendro better!
+
+---
+
+## Support
+
+If you find dendro useful, please:
+- ⭐ Star the project on [GitHub](https://github.com/CrashBytes/dendron)
+- 🐦 Share it on social media
+- 📝 Write a blog post about it
+- 💬 Tell your developer friends
 
 ---
 
