@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dendro Documentation - Directory Tree Visualization</title>
+    <meta name="description" content="A beautiful directory tree visualization CLI with file type icons - dendro (δένδρο) means 'tree' in Greek">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 2rem 1rem;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        .header .subtitle {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            font-style: italic;
+        }
+
+        .content {
+            padding: 2rem;
+        }
+
+        .badge {
+            display: inline-block;
+            background: #27ae60;
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 12px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin: 0.5rem 0.25rem;
+        }
+
+        .badge.warning {
+            background: #e67e22;
+        }
+
+        .requirements {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 4px;
+        }
+
+        .requirements strong {
+            color: #856404;
+        }
+        
+        .code-block-container {
+            position: relative;
+            margin: 1.5rem 0;
+        }
+        
+        .copy-button {
+            position: absolute;
+            top: 0.5rem;
+            right: 0.5rem;
+            padding: 0.5rem 1rem;
+            background: #667eea;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.875rem;
+            font-weight: 600;
+            transition: all 0.2s;
+            z-index: 10;
+        }
+        
+        .copy-button:hover {
+            background: #764ba2;
+            transform: translateY(-1px);
+        }
+        
+        .copy-button.copied {
+            background: #27ae60;
+        }
+        
+        pre {
+            background: #2c3e50;
+            color: #ecf0f1;
+            border-radius: 8px;
+            padding: 1.5rem;
+            overflow-x: auto;
+            font-size: 0.9rem;
+        }
+        
+        code {
+            font-family: 'Monaco', 'Courier New', monospace;
+        }
+        
+        h2 {
+            color: #2c3e50;
+            font-size: 1.8rem;
+            margin: 2rem 0 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #667eea;
+        }
+
+        h3 {
+            color: #34495e;
+            font-size: 1.3rem;
+            margin: 1.5rem 0 0.75rem;
+        }
+
+        .section {
+            margin-bottom: 2rem;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+
+        .feature-card {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+        }
+
+        .feature-card h4 {
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+        }
+
+        .footer {
+            background: #2c3e50;
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .footer a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .footer a:hover {
+            color: #764ba2;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .content {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🌳 Dendro</h1>
+            <p class="subtitle">δένδρο (dendro) means "tree" in Greek</p>
+            <div style="margin-top: 1rem;">
+                <span class="badge">v1.0.2</span>
+                <span class="badge">Node.js 20+</span>
+                <span class="badge">MIT License</span>
+            </div>
+        </div>
+
+        <div class="content">
+            <section class="section">
+                <p style="font-size: 1.1rem; color: #555; margin-bottom: 1.5rem;">
+                    A beautiful directory tree visualization CLI with file type icons. 
+                    Perfect for exploring project structures, creating documentation, and understanding codebases.
+                </p>
+
+                <div class="requirements">
+                    <strong>⚠️ Requirements:</strong> Node.js version 20.0.0 or higher is required.
+                </div>
+            </section>
+
+            <section class="section">
+                <h2>✨ Features</h2>
+                <div class="features">
+                    <div class="feature-card">
+                        <h4>🎨 Beautiful Icons</h4>
+                        <p>File type-specific icons for instant recognition</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>⚡ Lightning Fast</h4>
+                        <p>Optimized performance for large directories</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>🎯 Configurable Depth</h4>
+                        <p>Control how deep to traverse directories</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>👁️ Hidden Files</h4>
+                        <p>Toggle visibility of hidden files and folders</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2>📦 Installation</h2>
+                
+                <h3>Via npm (Recommended)</h3>
+                <div class="code-block-container">
+                    <button class="copy-button" onclick="copyCode(this, 'install-npm')">Copy</button>
+                    <pre><code id="install-npm">npm install -g @crashbytes/dendro</code></pre>
+                </div>
+                
+                <h3>Via npx (No Installation)</h3>
+                <div class="code-block-container">
+                    <button class="copy-button" onclick="copyCode(this, 'install-npx')">Copy</button>
+                    <pre><code id="install-npx">npx @crashbytes/dendro</code></pre>
+                </div>
+                
+                <h3>From Source (GitHub)</h3>
+                <div class="code-block-container">
+                    <button class="copy-button" onclick="copyCode(this, 'install-source')">Copy</button>
+                    <pre><code id="install-source">git clone https://github.com/CrashBytes/dendro.git
+cd dendro
+npm install
+npm link</code></pre>
+                </div>
+            </section>
+            
+            <section class="section">
+                <h2>🚀 Quick Start</h2>
+                
+                <h3>Basic Usage</h3>
+                <div class="code-block-container">
+                    <button class="copy-button" onclick="copyCode(this, 'quickstart-1')">Copy</button>
+                    <pre><code id="quickstart-1"># Visualize current directory
+dendro</code></pre>
+                </div>
+                
+                <div class="code-block-container">
+                    <button class="copy-button" onclick="copyCode(this, 'quickstart-2')">Copy</button>
+                    <pre><code id="quickstart-2"># Visualize specific directory
+dendro /path/to/project</code></pre>
+                </div>
+                
+                <h3>Advanced Options</h3>
+                <div class="code-block-container">
+                    <button class="copy-button" onclick="copyCode(this, 'quickstart-3')">Copy</button>
+                    <pre><code id="quickstart-3"># Limit depth to 3 levels
+dendro ~/projects -d 3</code></pre>
+                </div>
+                
+                <div class="code-block-container">
+                    <button class="copy-button" onclick="copyCode(this, 'quickstart-4')">Copy</button>
+                    <pre><code id="quickstart-4"># Show all files including hidden
+dendro -a</code></pre>
+                </div>
+                
+                <div class="code-block-container">
+                    <button class="copy-button" onclick="copyCode(this, 'quickstart-5')">Copy</button>
+                    <pre><code id="quickstart-5"># Combine options
+dendro ~/my-project -d 2 -a</code></pre>
+                </div>
+                
+                <h3>Get Help</h3>
+                <div class="code-block-container">
+                    <button class="copy-button" onclick="copyCode(this, 'quickstart-6')">Copy</button>
+                    <pre><code id="quickstart-6"># Show help
+dendro --help</code></pre>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2>📖 Command Options</h2>
+                <pre style="background: #f8f9fa; color: #2c3e50; border: 1px solid #e1e4e8;">
+Usage: dendro [options] [directory]
+
+Arguments:
+  directory           Directory to visualize (default: current directory)
+
+Options:
+  -V, --version       Output the version number
+  -d, --depth <n>     Maximum depth to traverse (default: unlimited)
+  -a, --all           Show hidden files and directories
+  -h, --help          Display help for command
+                </pre>
+            </section>
+        </div>
+
+        <div class="footer">
+            <p>Made with ❤️ by <a href="https://github.com/CrashBytes" target="_blank">CrashBytes</a></p>
+            <p style="margin-top: 0.5rem;">
+                <a href="https://github.com/CrashBytes/dendro" target="_blank">GitHub</a> • 
+                <a href="https://www.npmjs.com/package/@crashbytes/dendro" target="_blank">npm</a> • 
+                <a href="https://github.com/CrashBytes/dendro/issues" target="_blank">Report Issues</a>
+            </p>
+        </div>
+    </div>
+    
+    <script>
+        async function copyCode(button, codeId) {
+            const codeElement = document.getElementById(codeId);
+            const textToCopy = codeElement.textContent;
+            
+            try {
+                await navigator.clipboard.writeText(textToCopy);
+                
+                // Visual feedback
+                const originalText = button.textContent;
+                button.textContent = '✓ Copied!';
+                button.classList.add('copied');
+                
+                // Reset after 2 seconds
+                setTimeout(() => {
+                    button.textContent = originalText;
+                    button.classList.remove('copied');
+                }, 2000);
+            } catch (err) {
+                console.error('Failed to copy text:', err);
+                button.textContent = 'Failed';
+                setTimeout(() => {
+                    button.textContent = 'Copy';
+                }, 2000);
+            }
+        }
+    </script>
+</body>
+</html>

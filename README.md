@@ -11,7 +11,9 @@
 
 A beautiful, fast directory tree visualization CLI with intuitive file type icons.
 
-🔗 **[GitHub Repository](https://github.com/CrashBytes/dendro)** | 📦 **[npm Package](https://www.npmjs.com/package/@crashbytes/dendro)**
+📚 **[Documentation](https://crashbytes.github.io/dendro/)** | 🔗 **[GitHub Repository](https://github.com/CrashBytes/dendro)** | 📦 **[npm Package](https://www.npmjs.com/package/@crashbytes/dendro)**
+
+> **Note:** Requires Node.js 20.0.0 or higher
 
 ---
 
