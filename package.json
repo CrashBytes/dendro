@@ -28,10 +28,10 @@
   },
   "homepage": "https://github.com/CrashBytes/dendro#readme",
   "dependencies": {
-    "commander": "^11.1.0",
+    "commander": "^14.0.2",
     "chalk": "^4.1.2"
   },
   "engines": {
-    "node": ">=14.0.0"
+    "node": ">=20.0.0"
   }
 }
