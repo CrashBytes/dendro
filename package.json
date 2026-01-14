@@ -1,7 +1,8 @@
 {
   "name": "@crashbytes/dendro",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "description": "A beautiful directory tree visualization CLI with file type icons - dendro (δένδρο) means 'tree' in Greek",
+  "type": "module",
   "main": "index.js",
   "bin": {
     "dendro": "bin/cli.js"
@@ -29,7 +30,7 @@
   "homepage": "https://github.com/CrashBytes/dendro#readme",
   "dependencies": {
     "commander": "^14.0.2",
-    "chalk": "^4.1.2"
+    "chalk": "^5.6.2"
   },
   "engines": {
     "node": ">=20.0.0"

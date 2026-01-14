@@ -370,8 +370,6 @@ MIT License - see [LICENSE](https://github.com/CrashBytes/dendro/blob/main/LICEN
 
 ## Acknowledgments
 
-Built with ❤️ for developers who love beautiful CLIs.
-
 Special thanks to all [contributors](https://github.com/CrashBytes/dendro/graphs/contributors) who help make dendro better!
 
 ---

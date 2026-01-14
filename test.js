@@ -1,5 +1,5 @@
-const { buildTree, renderTree, getTreeStats, getIcon } = require('./index');
-const path = require('path');
+import { buildTree, renderTree, getTreeStats, getIcon } from './index.js';
+import path from 'path';
 
 console.log('Running tests for dendro...\n');
 

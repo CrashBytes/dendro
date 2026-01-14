@@ -1,16 +1,16 @@
 #!/usr/bin/env node
 
-const { Command } = require('commander');
-const chalk = require('chalk');
-const path = require('path');
-const { buildTree, renderTree, getTreeStats } = require('../index');
+import { Command } from 'commander';
+import chalk from 'chalk';
+import path from 'path';
+import { buildTree, renderTree, getTreeStats } from '../index.js';
 
 const program = new Command();
 
 program
   .name('dendro')
   .description('Display directory tree structure with beautiful icons')
-  .version('1.0.0')
+  .version('1.1.0')
   .argument('[path]', 'Directory path to display', '.')
   .option('-d, --max-depth <number>', 'Maximum depth to traverse', parseInt)
   .option('-a, --all', 'Show hidden files and directories', false)

@@ -1,5 +1,5 @@
-const fs = require('fs');
-const path = require('path');
+import fs from 'fs';
+import path from 'path';
 
 // Icon mappings for different file types and directories
 const icons = {
@@ -287,7 +287,7 @@ function getTreeStats(tree) {
   return { files, directories };
 }
 
-module.exports = {
+export {
   buildTree,
   renderTree,
   getTreeStats,
